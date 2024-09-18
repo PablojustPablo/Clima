@@ -1,0 +1,160 @@
+/* Estilos para el loader */
+.loader,
+.loader:before,
+.loader:after {
+  background: #ffffff; /* Fondo del loader */
+  -webkit-animation: load1 1s infinite ease-in-out; /* Animación para el loader */
+  animation: load1 1s infinite ease-in-out;
+  width: 1em; /* Ancho del loader */
+  height: 4em; /* Altura del loader */
+}
+
+/* Estilos generales para el loader */
+.loader {
+  color: #ffffff; /* Color del texto dentro del loader */
+  text-indent: -9999em; /* Oculta el texto dentro del loader */
+  margin: 88px auto; /* Margen para centrar el loader horizontalmente */
+  position: relative; /* Posición relativa para los elementos absolutos dentro del loader */
+  font-size: 11px; /* Tamaño de fuente del loader */
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation-delay: -0.16s; /* Retardo de la animación */
+  animation-delay: -0.16s;
+}
+
+/* Elementos antes y después del loader para la animación */
+.loader:before,
+.loader:after {
+  position: absolute; /* Posición absoluta para crear elementos sobre el loader */
+  top: 0;
+  content: ''; /* Contenido vacío */
+}
+
+/* Estilos para el elemento 'before' del loader */
+.loader:before {
+  left: -1.5em; /* Posición izquierda */
+  -webkit-animation-delay: -0.32s; /* Retardo de la animación */
+  animation-delay: -0.32s;
+}
+
+/* Estilos para el elemento 'after' del loader */
+.loader:after {
+  left: 1.5em; /* Posición derecha */
+}
+
+/* Animación de carga personalizada 'load1' */
+@-webkit-keyframes load1 {
+  0%, 80%, 100% {
+    box-shadow: 0 0;
+    height: 4em; /* Altura del loader en diferentes puntos de la animación */
+  }
+  40% {
+    box-shadow: 0 -2em;
+    height: 5em; /* Altura del loader en diferentes puntos de la animación */
+  }
+}
+
+/* Animación de carga personalizada 'load1' */
+@keyframes load1 {
+  0%, 80%, 100% {
+    box-shadow: 0 0;
+    height: 4em; /* Altura del loader en diferentes puntos de la animación */
+  }
+  40% {
+    box-shadow: 0 -2em;
+    height: 5em; /* Altura del loader en diferentes puntos de la animación */
+  }
+}
+
+/* Definición de fuentes personalizadas */
+@font-face {
+    font-family: 'Roboto';
+    font-family: Cooper Black;
+    src: url(fonts/COOPBL.ttf); /* Ruta de la fuente personalizada */
+}
+
+/* Estilos generales para el cuerpo del documento */
+body {
+    color: white; /* Color de texto */
+    background-color: #ee7434; /* Color de fondo */
+    height: 100vh; /* Altura del cuerpo */
+    display: flex; /* Display tipo flex para el cuerpo */
+    flex-direction: column; /* Dirección de la flexión */
+    align-items: center; /* Centra elementos horizontalmente */
+    margin: 0.5px; /* Márgenes generales */
+}
+
+/* Estilos para el título */
+h1 {
+    font-family: Cooper Black; /* Fuente del título */
+    text-shadow: 0.2rem 0.2rem 2rem rgb(255, 255, 255); /* Sombra de texto */
+    display: flex; /* Display tipo flex para el título */
+    justify-content: center; /* Centra elementos horizontalmente */
+    text-align: center; /* Alineación de texto centrada */
+    padding: 10px; /* Relleno del título */
+    margin-bottom: 50px; /* Margen inferior del título */
+}
+
+/* Estilos para el contenedor principal */
+#container {
+    background-color: #e55932; /* Color de fondo del contenedor principal */
+    padding: 20px; /* Relleno del contenedor principal */
+    display: none; /* Inicialmente oculta el contenedor principal */
+}
+
+/* Estilos para los bloques dentro del contenedor */
+#container > .block {
+    padding: 20px; /* Relleno de los bloques */
+}
+
+/* Estilos generales para los bloques */
+.block {
+    font-family: 'Roboto'; /* Fuente de los bloques */
+    text-transform: uppercase; /* Texto en mayúsculas */
+    color: rgb(255, 255, 255); /* Color de texto */
+    font-weight: bold; /* Peso de fuente en negrita */
+}
+
+/* Estilos para el primer bloque dentro del contenedor */
+.block:first-child {
+    background-color: #ee7434; /* Color de fondo del primer bloque */
+    color: black; /* Color de texto del primer bloque */
+}
+
+/* Estilos para el contenedor de información */
+.information-container {
+    display: flex; /* Display tipo flex para el contenedor de información */
+    padding: 0.6px; /* Establece un pequeño relleno de 0.6 píxeles en todas las direcciones */
+}
+
+/* Estilos para la información */
+.info {
+    margin-left: 10px; /* Margen izquierdo de la información */
+}
+
+/* Estilos para el elemento 'location' */
+#location {
+    font-size: 25px; /* Tamaño de fuente de 'location' */
+}
+
+/* Estilos para el elemento de audio */
+#miAudio {
+  display: none; /* Inicialmente oculta el elemento de audio */
+}
+
+/* Estilos para el botón */
+button {
+  margin-top: 15px; /* Margen superior del botón */
+  border: none; /* Elimina los bordes del botón */
+  background: none; /* Elimina el fondo del botón */
+  padding: 0; /* Elimina el espacio interior del botón */
+  cursor: pointer; /* Cursor de puntero al pasar el ratón */
+  font-size: inherit; /* Utiliza el tamaño de fuente heredado */
+}
+
+/* Estilos para el título y el botón para ocultarlos inicialmente */
+#h1,
+#reproducir {
+    display: none; /* Inicialmente oculta el título y el botón */
+}
